@@ -281,4 +281,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        try{
+            locationManager.
+                    removeUpdates(locationListener);
+        }
+        catch (Exception ex){
+
+        }
+
+    }
 }
